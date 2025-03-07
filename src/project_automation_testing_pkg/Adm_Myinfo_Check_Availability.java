@@ -140,7 +140,7 @@ public class Adm_Myinfo_Check_Availability {
 		//// *****/////
 
 		// Close the browser window
-		 driver.quit();
+		driver.quit();
 
 	}
 }

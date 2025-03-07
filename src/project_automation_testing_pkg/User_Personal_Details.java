@@ -90,7 +90,7 @@ public class User_Personal_Details {
 
 		Thread.sleep(1000);
 		// Close the browser window
-		// driver.quit();
+		 driver.quit();
 
 	}
 }
