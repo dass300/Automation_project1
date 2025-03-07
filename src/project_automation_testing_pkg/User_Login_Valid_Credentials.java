@@ -1,8 +1,6 @@
 package project_automation_testing_pkg;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
+import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -16,7 +14,7 @@ public class User_Login_Valid_Credentials {
 		driver.manage().window().maximize();
 
 		// Set implicit wait to allow elements to load
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		// Create an instance of LoginPage and perform login
 		ESS_User_Login essUserLogin = new ESS_User_Login(driver);

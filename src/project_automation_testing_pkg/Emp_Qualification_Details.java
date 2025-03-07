@@ -3,9 +3,8 @@ package project_automation_testing_pkg;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +20,7 @@ public class Emp_Qualification_Details {
 		driver.manage().window().maximize();
 
 		// Set implicit wait to allow elements to load
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		// Create an instance of LoginPage and perform login
 		Adm_LoginPage admLoginPage = new Adm_LoginPage(driver);
@@ -217,7 +216,7 @@ public class Emp_Qualification_Details {
 		
 		
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		//// *****/////
 		// Locate the Languages-add button
 		WebElement button = driver.findElement(By.xpath("(//button[text()=' Add ' and @type='button'])[4]"));

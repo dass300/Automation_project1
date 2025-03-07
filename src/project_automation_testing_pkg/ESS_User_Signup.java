@@ -1,13 +1,9 @@
 package project_automation_testing_pkg;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ESS_User_Signup {
@@ -20,7 +16,7 @@ public class ESS_User_Signup {
 		driver.manage().window().maximize();
 
 		// Set implicit wait to allow elements to load
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		// Create an instance of LoginPage and perform login
 		Adm_LoginPage loginPage = new Adm_LoginPage(driver);
@@ -88,7 +84,7 @@ public class ESS_User_Signup {
 		//// *****/////
 
 		// Close the browser window
-		//driver.quit();
+		driver.quit();
 
 	}
 }
